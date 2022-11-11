@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Ahorcado_Game</string>
+    <string name="spoilerTextView">Esto contendrá una pista</string>
+    <string name="aceptarButton">Aceptar</string>
+    <string name="userEditText">Introduce una letra</string>
+    <string name="currentCharTextView">C_N_JO</string>
+</resources>
