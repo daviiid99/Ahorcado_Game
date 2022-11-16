@@ -6,17 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/spoilerTextView"
-        android:layout_width="308dp"
-        android:layout_height="89dp"
-        android:text="@string/spoilerTextView"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <Button
         android:id="@+id/button"
         android:layout_width="144dp"
@@ -26,15 +15,18 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
+        tools:visibility="visible"
         app:layout_constraintStart_toStartOf="parent" />
+
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="226dp"
         android:layout_height="222dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="171dp"
+        tools:layout_editor_absoluteY="137dp"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
@@ -45,21 +37,34 @@
         android:textAlignment="center"
         android:textSize="34sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/editText"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.513"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <EditText
+        android:imeOptions="actionDone"
+        android:inputType="text"
         android:id="@+id/editText"
-        android:layout_width="244dp"
-        android:layout_height="75dp"
-        android:layout_marginTop="74dp"
-        android:text="@string/userEditText"
+        android:layout_width="270dp"
+        android:layout_height="50dp"
+        android:hint="Introduce una letra"
         android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/currentCharTextView" />
+
+    <Button
+        android:id="@+id/reboot"
+        android:layout_width="137dp"
+        android:layout_height="41dp"
+        android:text="Salir"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText"
+        app:layout_constraintVertical_bias="0.476"
+        tools:visibility="invisible" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

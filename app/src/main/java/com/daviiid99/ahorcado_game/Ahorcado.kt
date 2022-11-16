@@ -39,7 +39,7 @@ class Ahorcado() {
         // Vamos a proveer de caracteres aleatorios de la palabra generada
         // Así el usuario tendrá alguna pista :)
 
-         var char1 = "1"
+         var  char1 = "1"
          var  char2 = "2" // Spoiler 2
          var  char3 = "3" // Spoiler 3
 
@@ -77,10 +77,17 @@ class Ahorcado() {
 
     }
 
-    fun incluirNuevaLetra() : String{
+    fun incluirNuevaLetra(letra : String) : String{
 
         var lista = palabraACtualHolders.toCharArray()
-        lista[allowedChar] = splitPalabraActual[allowedChar]
+
+
+        for ((index, value) in splitPalabraActual.withIndex()){
+            if (splitPalabraActual[index] == letra[0]){
+                lista[index] = letra[0]
+            }
+
+        }
         var finalSpoiler = ""
 
         for (char in lista){
@@ -128,7 +135,7 @@ class Ahorcado() {
             }
         }
 
-        var palabra = incluirNuevaLetra()
+        var palabra = incluirNuevaLetra(letra)
 
         return palabra
 
